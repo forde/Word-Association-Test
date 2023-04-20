@@ -16,11 +16,18 @@ export default function results() {
 
     const [entries, setEntries] = useState([])
 
+    const { push:goTo, query } = useRouter()
+
     useEffect(() => {
         setEntries(storedEntries)
     }, [])
 
-    const { push:goTo } = useRouter()
+    useEffect(() => {
+        if(query.key) {
+            const res = localStorage.getItem(`results-${query.key}`)
+            console.log(res)
+        }
+    }, [query.key])
 
     const removeResults = () => {
         console.log(removeEntries)

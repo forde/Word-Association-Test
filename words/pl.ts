@@ -54,7 +54,7 @@ export default [
     'głód',
     'biały',
     'dziecko',
-    'uważać',
+    'opiekować się',
     'ołowiany ołówek',
     'smutek',
     'śliwka',
